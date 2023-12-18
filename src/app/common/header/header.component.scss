@@ -1,0 +1,26 @@
+header {
+    .navbar.navbar-light {
+        background: #ffffffd2;
+        backdrop-filter: blur(4px);
+
+        .profile-content {
+            &::after {
+                border-top: 0.3em solid var(--tikme-theme);
+            }
+
+            i {
+                font-size: 1.2rem;
+            }
+
+            .user-name {
+                font-size: 0.86rem;
+                max-width: 125px;
+            }
+
+            i,
+            .user-name {
+                color: var(--tikme-theme)
+            }
+        }
+    }
+}

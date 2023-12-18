@@ -1,0 +1,220 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --tikme-white: #ffffff;
+    --tikme-gray: #6c757d;
+    --tikme-lightgray: #edeced;
+    --tikme-dark: #212529;
+    --tikme-black: #000000;
+    --tikme-theme: #f0431d;
+    --tikme-theme-hover: #e42a00;
+    --tikme-success: #12b55c;
+    --tikme-success-hover: #00a54a;
+    --tikme-blue: #1f4cc2;
+    --tikme-blue-hover: #0031ad;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*,
+html,
+body,
+p {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif !important;
+    // font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.text-josefin-sans {
+    font-family: 'Josefin Sans', sans-serif !important;
+}
+
+@mixin fw($weight) {
+    &-#{$weight} {
+        font-weight: $weight !important;
+    }
+}
+
+.fw {
+    @include fw(400);
+    @include fw(500);
+    @include fw(600);
+    @include fw(700);
+    @include fw(800);
+    @include fw(900);
+}
+
+@mixin border-style($direction, $style) {
+    &-#{$direction} {
+        border-#{$direction}-style: $style !important;
+    }
+}
+
+.border-dotted {
+    @include border-style(top, dotted);
+    @include border-style(right, dotted);
+    @include border-style(bottom, dotted);
+    @include border-style(left, dotted);
+}
+
+.border-dashed {
+    @include border-style(top, dashed);
+    @include border-style(right, dashed);
+    @include border-style(bottom, dashed);
+    @include border-style(left, dashed);
+}
+
+/* theme typography */
+.tikme-text {
+    &-white {
+        color: var(--tikme-white)
+    }
+
+    &-gray {
+        color: var(--tikme-gray)
+    }
+
+    &-lightgray {
+        color: var(--tikme-lightgray)
+    }
+
+    &-dark {
+        color: var(--tikme-dark)
+    }
+
+    &-black {
+        color: var(--tikme-black)
+    }
+
+    &-theme {
+        color: var(--tikme-theme)
+    }
+
+    &-success {
+        color: var(--tikme-success)
+    }
+}
+
+.tikme-bg {
+    &-white {
+        background-color: var(--tikme-white)
+    }
+
+    &-gray {
+        background-color: var(--tikme-gray)
+    }
+
+    &-lightgray {
+        background-color: var(--tikme-lightgray)
+    }
+
+    &-dark {
+        background-color: var(--tikme-dark)
+    }
+
+    &-black {
+        background-color: var(--tikme-black)
+    }
+
+    &-theme {
+        background-color: var(--tikme-theme)
+    }
+
+    &-success {
+        background-color: var(--tikme-success)
+    }
+}
+
+/* theme buttons */
+.tikme-btn-theme {
+    color: var(--tikme-white);
+    background: var(--tikme-theme);
+    border-color: var(--tikme-theme);
+    transition: all 250ms;
+
+    &:is(&:hover, &.active, &:active) {
+        color: var(--tikme-white);
+        background: var(--tikme-theme-hover);
+        border-color: var(--tikme-theme-hover);
+    }
+
+    &-outline {
+        color: var(--tikme-theme);
+        background: transparent;
+        border-color: var(--tikme-theme);
+
+        &:is(&:hover, &.active, &:active) {
+            color: var(--tikme-white);
+            background: var(--tikme-theme);
+            border-color: var(--tikme-theme);
+        }
+    }
+
+    &-lightgray {
+        color: var(--tikme-dark);
+        background: var(--tikme-lightgray);
+        border-color: var(--tikme-lightgray);
+
+        &:is(&:hover, &.active, &:active) {
+            color: var(--tikme-white);
+            background: var(--tikme-theme);
+            border-color: var(--tikme-theme);
+        }
+    }
+
+    &-success {
+        color: var(--tikme-white);
+        background: var(--tikme-success);
+        border-color: var(--tikme-success);
+
+        &:is(&:hover, &.active, &:active) {
+            color: var(--tikme-white);
+            // background: color-mix(in srgb, var(--tikme-success) 85%, transparent);
+            background: var(--tikme-success-hover);
+            border-color: var(--tikme-success);
+        }
+    }
+
+    &-blue {
+        color: var(--tikme-white);
+        background: var(--tikme-blue);
+        border-color: var(--tikme-blue);
+
+        &:is(&:hover, &.active, &:active) {
+            color: var(--tikme-white);
+            background: var(--tikme-blue-hover);
+            border-color: var(--tikme-blue);
+        }
+    }
+}
+
+.tikme-offcanvas {
+    .btn-custom-close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--tikme-black);
+
+        i {
+            font-size: 1.45rem;
+            color: var(--tikme-dark);
+        }
+
+        &:is(&:hover, &:active, &.active) {
+            i {
+                color: var(--tikme-theme)
+            }
+        }
+    }
+}
+
+.tikme-modal {
+    .modal-content {
+        border-radius: 1rem;
+        border: none;
+    }
+}

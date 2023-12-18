@@ -1,0 +1,130 @@
+.hero-carousel {
+    .carousel-card {
+        .bg-img {
+            position: relative;
+            border-radius: 1.5rem;
+            overflow: hidden;
+
+            // max-height: 560px;
+            @media (min-width: 992px) {
+                &::before {
+                    content: "";
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.35);
+                }
+            }
+        }
+
+        .carousel-card-content {
+            position: relative;
+
+            @media (min-width: 992px) {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                transform: translateY(-50%);
+                z-index: 2;
+            }
+
+            .container-block {
+                @media (min-width: 992px) {
+                    max-width: 95%;
+                }
+
+                .card {
+                    position: relative;
+                    border-radius: 2rem;
+                    background: color-mix(in srgb, #ffffff 70%, transparent);
+                    backdrop-filter: blur(4px);
+                    z-index: 1;
+
+                    .branch-img {
+                        img {
+                            max-width: 130px;
+                            height: 130px;
+                        }
+                    }
+
+                    .slider-content-details {
+                        .card-title {
+                            display: -webkit-box;
+                            -webkit-line-clamp: 1;
+                            -webkit-box-orient: vertical;
+                            overflow: hidden;
+                        }
+
+                        .location,
+                        .phone-number,
+                        .opening-time {
+                            span {
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                overflow: hidden;
+                            }
+                        }
+                    }
+                }
+
+                ::ng-deep .carousel.slide {
+                    box-shadow: none;
+                    outline: none;
+
+                    .carousel-indicators {
+                        bottom: -2.5rem;
+
+                        [data-bs-target] {
+                            background-color: var(--tikme-theme);
+
+                            @media (min-width: 992px) {
+                                background-color: var(--tikme-white);
+                            }
+                        }
+                    }
+
+                    .carousel-inner {
+                        outline: none;
+                        border-radius: 2rem;
+                        overflow: hidden;
+
+                        .picsum-img-wrapper {
+                            max-height: 200px;
+                        }
+                    }
+
+                    .carousel-control-prev,
+                    .carousel-control-next {
+                        top: 45%;
+                        width: 25px;
+                        height: 25px;
+                        border-radius: 50%;
+                        background: var(--tikme-white);
+                        padding: 6px;
+                        opacity: 1;
+                    }
+
+                    .carousel-control-prev {
+                        left: 10px;
+
+                        .carousel-control-prev-icon {
+                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23f0431d' class='bi bi-caret-left-fill' viewBox='0 0 16 16'%3E%3Cpath d='m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z'/%3E%3C/svg%3E");
+                        }
+                    }
+
+                    .carousel-control-next {
+                        right: 10px;
+
+                        .carousel-control-next-icon {
+                            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23f0431d' class='bi bi-caret-right-fill' viewBox='0 0 16 16'%3E%3Cpath d='m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z'/%3E%3C/svg%3E");
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

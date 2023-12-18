@@ -1,0 +1,68 @@
+<section class="hero-carousel py-3 px-lg-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="carousel-card rounded-4 position-relative">
+                    <div class="bg-img">
+                        <img class="img-fluid object-fit-cover" src="https://source.unsplash.com/MQUqbmszGGM/1920x750" alt="img">
+                    </div>
+                    <form class="w-100 my-3 p-2 d-lg-none d-block">
+                        <div class="form-group position-relative">
+                            <input type="text" class="form-control pe-5" placeholder="Search Location and Food...">
+                            <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-2"></i>
+                        </div>
+                    </form>
+                    <div class="carousel-card-content mt-lg-0">
+                        <div class="row gy-3 align-items-center justify-content-center w-100 mx-auto container-block">
+                            <div class="col-xl-6 col-lg-6 col-md-6">
+                                <div class="card border-0 shadow-sm">
+                                    <div class="card-body hstack align-items-start gap-3">
+                                        <div class="branch-img rounded-4">
+                                            <img src="https://source.unsplash.com/Oxb84ENcFfU/350x350" class="img-fluid object-fit-cover rounded-4 shadow" alt="branch-img">
+                                        </div>
+                                        <div class="vstack justify-content-between slider-content-details">
+                                            <div class="vstack gap-1">
+                                                <div class="card-title fw-bold h5 flex-wrap">City South Pizza, Kings Cross Rd </div>
+                                                <div class="vstack gap-2">
+                                                    <div class="location d-flex align-items-start gap-2">
+                                                        <i class="bi bi-geo-alt-fill tikme-text-theme"></i>
+                                                        <span>7700 Hurontario St & Ray Lawson Blvd, Brampton, ON L6Y 4M3, Canada </span>
+                                                    </div>
+                                                    <div class="phone-number d-flex align-items-center gap-2">
+                                                        <i class="bi bi-telephone-fill tikme-text-theme"></i>
+                                                        <span>+1 (905) 457-5557</span>
+                                                    </div>
+                                                    <div class="restaurants-openingtime d-flex align-items-start gap-2">
+                                                        <i class="bi bi-clock-fill tikme-text-theme"></i>
+                                                        <span>Satrt Time : 12:00 AM to 11:59 PM <small class="badge bg-success fw-500" [style.fontSize.px]="12">Open</small></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-footer d-lg-block d-none">
+                                        <form class="w-100">
+                                            <div class="form-group position-relative">
+                                                <input type="text" class="form-control shadow-none border-0 bg-transparent pe-5" placeholder="Search Location and Food...">
+                                                <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-2"></i>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-5 offset-xl-1 d-lg-6 col-md-6">
+                                <ngb-carousel>
+                                    <ng-template ngbSlide *ngFor="let slide of sliders">
+                                        <div class="picsum-img-wrapper">
+                                            <img [src]="slide.imgPath" class="img-fluid object-fit-cover" alt="img-size=700x200" />
+                                        </div>
+                                    </ng-template>
+                                </ngb-carousel>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

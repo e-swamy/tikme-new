@@ -1,0 +1,34 @@
+.restaurants {
+    .single-branch {
+        background: color-mix(in srgb, var(--tikme-lightgray) 80%, transparent);
+
+        .card-body {
+            background: var(--tikme-white);
+            border-radius: 1rem;
+
+            .card-title {
+                display: -webkit-box;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+            }
+
+            .location,
+            .phone-number,
+            .opening-time {
+                span {
+                    color: #212529bf;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 2;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                }
+            }
+        }
+
+        .max-btn {
+            min-width: 130px;
+        }
+
+    }
+}

@@ -1,0 +1,51 @@
+.branch-jumbotron {
+    .jumbotron {
+        .bg-img {
+            position: relative;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            max-height: 400px;
+
+            @media (min-width: 992px) {
+                &::before {
+                    content: "";
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    background: rgba(0, 0, 0, 0.35);
+                }
+            }
+        }
+
+        .jumbotron-content {
+            position: relative;
+            margin: 0;
+
+            @media (min-width: 992px) {
+                position: absolute;
+                left: 2.5rem;
+                top: 50%;
+                width: 100%;
+                transform: translateY(-50%);
+                z-index: 2;
+            }
+
+            .card {
+                position: relative;
+                border-radius: 2rem;
+                background: color-mix(in srgb, #ffffff 70%, transparent);
+                backdrop-filter: blur(4px);
+                z-index: 1;
+
+                .branch-img {
+                    img {
+                        max-width: 130px;
+                        height: 130px;
+                    }
+                }
+            }
+        }
+    }
+}

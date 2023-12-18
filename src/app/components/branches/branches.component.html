@@ -1,0 +1,91 @@
+<app-branch-jumbotron></app-branch-jumbotron>
+<section class="branches my-4 px-lg-5">
+    <div class="container-fluid">
+        <div class="row gy-3">
+            <div class="col-xl-8 col-lg-12">
+                <div class="menu-category-chips mb-4">
+                    <div class="menu-category-chiplist d-flex flex-wrap gap-2">
+                        <button class="btn btn-sm tikme-btn-theme-outline rounded-pill px-3" [ngClass]="chip === 'Snacks'?'active':''" *ngFor="let chip of chips">{{chip}}</button>
+                    </div>
+                </div>
+                <div class="menu-category">
+                    <div class="select-menu-category mb-4">
+                        <h4 class="fw-bold tikme-text-theme">Snaks <span class="text-dark small">(14 Items)</span></h4>
+                        <p>The sole pack's biryanis are the half-sized portions for the regular biryanis</p>
+                    </div>
+                    <div class="row gy-4 menu-category-list">
+                        <div class="col-md-6 col-sm-12" *ngFor="let menuItem of menuItems">
+                            <div class="card hstack gap-3 p-3 rounded-4 single-menu-item align-items-start">
+                                <div class="card-header p-0 border-0 rounded-4 bg-transparent position-relative">
+                                    <img [src]="menuItem.imgUrl" class="img-fluid object-fit-cover rounded-4 shadow" alt="">
+                                    <div *ngIf="menuItem.badge===true" class="Special-Offer position-absolute bottom-0 start-0 w-100 z-1">Special Offer</div>
+                                </div>
+                                <div class="card-body p-0">
+                                    <h6 class="card-title fw-600">{{menuItem.title}}</h6>
+                                    <p class="card-text opacity-75">{{menuItem.describe}}</p>
+                                    <div class="hstack gap-2">
+                                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.5" y="0.5" width="16" height="16" stroke="#0F8A65"></rect>
+                                            <circle cx="8.5" cy="8.5" r="5.5" fill="#0F8A65"></circle>
+                                        </svg>
+                                        <svg width="16" height="16" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <rect x="0.5" y="0.5" width="16" height="16" stroke="#f0431d"></rect>
+                                            <circle cx="8.5" cy="8.5" r="5.5" fill="#f0431d"></circle>
+                                        </svg>
+                                    </div>
+                                    <div class="hstack">
+                                        <div class="hstack gap-2">
+                                            <div class="price text-decoration-line-through">{{menuItem.price | currency:'USD'}}</div>
+                                            <div class="discount-price tikme-text-theme fw-600">{{menuItem.discountPrice | currency:'USD'}}</div>
+                                        </div>
+                                        <button class="ms-auto btn btn-sm tikme-btn-theme-success text-uppercase">Add</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-4 col-lg-12">
+                <aside class="sticky-top text-bg-light rounded-4 p-2 z-2" [style.top.px]="70">
+                    <div class="hstack align-items-center gap-2 bg-white rounded-4 p-3 loyalty-rewards">
+                        <div class="hstack gap-2">
+                            <div class="icon card p-2">
+                                <i class="bi bi-gift-fill tikme-text-white"></i>
+                            </div>
+                            <div class="content">
+                                <h6 class="fw-600 mb-0">Loyalty Rewards</h6>
+                                <div class="small">Login in to check our Loyalty rewards</div>
+                            </div>
+                        </div>
+                        <button class="btn tikme-btn-theme-success ms-auto">Login</button>
+                    </div>
+                    <div class="card cart-details bg-white rounded-4 border-0 overflow-hidden mt-3">
+                        <div class="card-header tikme-bg-theme tikme-text-white border-0 py-3">Your Cart Details</div>
+                        <div class="card-body">
+                            <div class="empty-data text-center my-4 opacity-75">
+                                <h4 aria-hidden="true" class="error-emoji">(·_·)</h4>
+                                <p>Can't find any carts.</p>
+                            </div>
+                        </div>
+                        <div class="card-footer tikme-bg-theme border-0 py-3 text-center">
+                            <button class="btn btn-link p-0 tikme-text-white text-decoration-none">Procced Pay</button>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="branch-details bg-black tikme-text-white p-5">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <h4 class="text-center tikme-text-theme fw-bold mb-4">City South Pizza, Hurontario St &amp; Ray Lawson Blvd, Brampton</h4>
+                <p>Rajdhani Sweets is one of the best Indian Vegetarian Food Restaurant Chains in Canada offering Desi Sweets and Snacks that please your sweet tooth and taste buds at affordable prices.Your hunt for the best and delicious North Indian Sweets/Snacks and South Indian Tiffins ends here. Rajdhani Sweets proudly boasts of making delicious Indian sweets and snacks!</p>
+                <p>We are committed to serving and delivering better quality Indian Vegetarian Food that includes North & South Indian cuisine, Snacks, Desserts, and more at the best price.Order or buy Indian sweets from the reputed Indian Sweet House cum Restaurant, RajdhaniSweets – Sweets & Snacks with a blend of desi Pyaar…..!Try a wide variety of Indian sweets and snacks at an affordable price – You can order online now! Visit us and experience the homely food again.</p>
+            </div>
+        </div>
+    </div>
+</section>
