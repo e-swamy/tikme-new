@@ -1,4 +1,65 @@
 <app-branch-jumbotron></app-branch-jumbotron>
+
+<section class="filter-orderpickup mt-2 mb-4 px-lg-5">
+    <div class="container-fluid">
+        <div class="advanced-filter p-3 rounded-4">
+            <form>
+                <div class="row gy-2">
+                    <div class="col-xl-3 col-lg-12">
+                        <div class="form-group position-relative">
+                            <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 z-3 tikme-text-theme"></i>
+                            <input type="text" class="form-control tikme-form-control ps-5" placeholder="Search by Category and Food">
+                        </div>
+                    </div>
+                    <div class="col-xl-9 col-lg-12">
+                        <div class="row gy-2">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="row gy-2 align-items-center">
+                                    <div class="col-xl-3 col-lg-3 col-md-12">
+                                        <div class="text-dark fw-bold">Your Order</div>
+                                    </div>
+                                    <div class="col-xl-9 col-lg-9 col-md-12 d-grid">
+                                        <button class="vstack btn tikme-theme-border position-relative">
+                                            <div class="d-flex align-items-center">
+                                                <svg width="12" height="12" viewBox="0 0 500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M249.634 353.649C219.827 353.649 190.02 353.638 160.212 353.675C158.178 353.679 156.08 353.801 154.123 354.296C149.254 355.539 146.627 358.984 145.751 363.797C145.014 367.852 147.234 372.909 151.152 374.881C153.457 376.046 156.272 376.734 158.858 376.738C219.372 376.838 279.886 376.823 340.399 376.786C342.297 376.782 344.288 376.575 346.078 375.991C353.255 373.653 356.034 364.844 351.657 358.68C348.845 354.718 344.824 353.627 340.211 353.63C310.019 353.664 279.826 353.649 249.634 353.649ZM238.129 238.844C235.021 239.525 232.376 239.987 229.794 240.687C193.897 250.439 170.331 280.017 168.777 317.223C168.433 325.403 173.283 330.508 181.685 330.516C227.063 330.556 272.438 330.556 317.817 330.516C326.208 330.508 330.936 325.469 330.666 317.168C329.582 283.749 309.264 255.141 278.01 243.369C272.657 241.356 267.008 240.132 261.281 238.478C261.281 235.226 261.31 231.889 261.277 228.556C261.195 221.105 256.386 215.818 249.719 215.811C243.09 215.807 238.266 221.094 238.14 228.574C238.081 231.908 238.129 235.241 238.129 238.844ZM414.794 447H84.5933C77.3606 443.863 75.1853 438.132 76.2581 430.737C76.3136 430.359 76.3247 429.971 76.358 429.586C78.0709 407.836 79.8282 386.087 81.493 364.333C83.1689 342.447 84.7042 320.553 86.3875 298.67C88.5703 270.261 90.8529 241.856 93.0578 213.45C95.1222 186.832 97.12 160.21 99.1954 133.595C99.8391 125.349 104.127 121.509 112.466 121.498C131.223 121.465 149.979 121.446 168.736 121.424C168.725 136.551 168.636 151.679 168.725 166.806C168.773 174.246 173.83 179.451 180.478 179.3C187.086 179.148 191.803 174.069 191.825 166.806C191.869 151.679 191.803 136.551 191.781 121.424H307.606C307.592 136.548 307.507 151.679 307.595 166.806C307.64 174.246 312.701 179.451 319.349 179.3C325.956 179.148 330.673 174.069 330.695 166.806C330.74 151.679 330.67 136.551 330.651 121.424C332.19 121.446 333.733 121.49 335.275 121.49C352.878 121.498 370.484 121.468 388.09 121.509C394.801 121.524 399.578 125.634 400.107 132.016C401.694 151.209 403.199 170.406 404.676 189.61C406.089 208.042 407.395 226.484 408.808 244.919C410.488 266.805 412.256 288.688 413.936 310.579C415.349 329.01 416.655 347.452 418.068 365.887C419.74 387.648 421.353 409.412 423.255 431.155C423.898 438.524 421.849 443.974 414.794 447Z" fill="#F55E00"></path>
+                                                    <path d="M330.757 121.534H307.505C307.135 114.893 307.742 108.02 306.207 101.66C302.248 85.2637 289.122 75.4562 271.875 75.2268C257.106 75.0307 242.334 75.027 227.565 75.2268C210.288 75.4636 197.34 85.1416 193.255 101.675C191.687 108.02 192.279 114.897 191.887 121.534H168.635C168.849 112.189 168.346 102.848 170.962 93.6395C177.651 70.1029 200.366 52.3487 224.857 52.1193C241.435 51.9639 258.016 51.9565 274.59 52.1193C301.863 52.3894 326.232 73.7655 329.854 100.798C330.768 107.628 330.487 114.616 330.757 121.534ZM193.492 307.104C194.299 285.543 220.921 262.384 245.745 261.115C280.036 259.365 302.551 284.792 306.14 307.104H193.492Z" fill="#F55E00"></path>
+                                                </svg>
+                                                <span class="fw-bold tikme-text-theme" [style.fontSize.px]="10">Pickup</span>
+                                            </div>
+                                            <div class="location-text d-grid">
+                                                <div class="text-truncate lh-1 mt-1 opacity-75">7700 Hornotario St &amp; Ray Lawson Blvd, Brampton, Canada</div>
+                                            </div>
+                                            <i class="bi bi-chevron-right position-absolute top-50 end-0 translate-middle-y me-1"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="row gy-2 align-items-center">
+                                    <div class="col-xl-3 col-lg-3 col-md-12">
+                                        <div class="text-dark fw-bold">Pickup Time</div>
+                                    </div>
+                                    <div class="col-xl-9 col-lg-9 col-md-12">
+                                        <div class="row gy-2">
+                                            <div class="col">
+                                                <ng-select [items]="ordertype" bindLabel="name" bindValue="name" [(ngModel)]="selectedOrderType" [ngModelOptions]="{standalone: true}" class="tikme-form-control" placeholder="Order Type"></ng-select>
+                                            </div>
+                                            <div class="col">
+                                                <ng-select [items]="asaptype" bindLabel="name" bindValue="name" [(ngModel)]="selectedAsapType" [ngModelOptions]="{standalone: true}" class="tikme-form-control" placeholder="ASAP"></ng-select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+
 <section class="branches my-4 px-lg-5">
     <div class="container-fluid">
         <div class="row gy-3">
@@ -47,7 +108,7 @@
                 </div>
             </div>
             <div class="col-xl-4 col-lg-12">
-                <aside class="sticky-top text-bg-light rounded-4 p-2 z-2" [style.top.px]="70">
+                <aside class="sticky-top text-bg-light rounded-4 p-2 z-1" [style.top.px]="70">
                     <div class="hstack align-items-center gap-2 bg-white rounded-4 p-3 loyalty-rewards">
                         <div class="hstack gap-2">
                             <div class="icon card p-2">
@@ -89,3 +150,57 @@
         </div>
     </div>
 </section>
+
+<!-- Start Order Modal -->
+<ng-template #orderpickupContent let-modal>
+    <div class="modal-header tikme-bg-theme py-2">
+        <button type="button" class="btn btn-link text-white p-0 shadow-none" (click)="modal.dismiss('Cross click')">
+            <i class="bi bi-x-circle-fill fs-4"></i>
+        </button>
+        <h5 class="modal-title tikme-text-white mx-auto text-uppercase fw-600">Your Order</h5>
+    </div>
+    <div class="modal-body">
+        <div class="tab-navs">
+            <ul ngbNav #nav="ngbNav" class="row g-2 nav nav-pills nav-fill" [(activeId)]="orderpickupTabActive" orientation="horizontal">
+                <li ngbNavItem="pickupTab" class="col-6">
+                    <button ngbNavLink>Pickup</button>
+                    <ng-template ngbNavContent>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <div class="card card-body text-center align-items-center justify-content-center h-100 py-4">
+                                    <h6 class="fw-600">ASAP</h6>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card card-body text-center align-items-center justify-content-center h-100 py-4">
+                                    <h6 class="fw-600">Pre-Order<br />for Later</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </li>
+                <li ngbNavItem="deliveryTab" class="col-6">
+                    <button ngbNavLink>Delivery</button>
+                    <ng-template ngbNavContent>
+                        <div class="row g-2">
+                            <div class="col-6">
+                                <div class="card card-body text-center align-items-center justify-content-center h-100 py-4">
+                                    <h6 class="fw-600">ASAP</h6>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card card-body text-center align-items-center justify-content-center h-100 py-4">
+                                    <h6 class="fw-600">Pre-Order<br />for Later</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-template>
+                </li>
+            </ul>
+        </div>
+        <hr class="my-3 tikme-text-gray">
+        <div [ngbNavOutlet]="nav"></div>
+    </div>
+    <button type="button" class="modal-footer btn tikme-btn-theme rounded-bottom rounded-0 justify-content-center text-uppercase fw-600" [disabled]="true">Procced</button>
+</ng-template>
+<!-- End Order Modal -->

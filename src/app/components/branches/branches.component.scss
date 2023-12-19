@@ -1,3 +1,13 @@
+.filter-orderpickup {
+    position: relative;
+    z-index: 2;
+
+    .advanced-filter {
+        background: #f8f9fa8f;
+        backdrop-filter: blur(4px);
+    }
+}
+
 .branches {
     .menu-category-chips {
         padding: 1.45rem;
