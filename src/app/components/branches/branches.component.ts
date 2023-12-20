@@ -16,7 +16,7 @@ export class BranchesComponent implements OnInit {
   }
 
   openOrderpickupModal(orderpickupContent: any) {
-    this.modalService.open(orderpickupContent, { size: 'md', scrollable: true, modalDialogClass: 'tikme-modal' })
+    this.modalService.open(orderpickupContent, { size: 'md', scrollable: true, centered: true, modalDialogClass: 'tikme-modal', backdropClass:'bg-blur-4 tikme-backdrop tikme-backdrop-bg' })
   }
 
   chips: any = ["Snacks", "Hakka", "Chaats", "Main", "Thali", "Salads", "Kulcha's", "South Indian", "Small Container", "Medium Container", "Large Container", "Extra Large Container", "Sweets", "Breads", "Desserts", "Drinks"]

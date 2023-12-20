@@ -21,7 +21,7 @@
                                                 <div class="vstack gap-2">
                                                     <div class="location d-flex align-items-start gap-2">
                                                         <i class="bi bi-geo-alt-fill tikme-text-theme"></i>
-                                                        <span>7700 Hurontario St & Ray Lawson Blvd, Brampton, ON L6Y 4M3, Canada <button class="btn tikme-btn-theme btn-sm d-inline-flex fw-500" [style.fontSize.px]="10">Change Branch</button></span>
+                                                        <span>7700 Hurontario St & Ray Lawson Blvd, Brampton, ON L6Y 4M3, Canada <button class="btn tikme-btn-theme btn-sm d-inline-flex fw-500" [style.fontSize.px]="10" (click)="selectedBranchLocationModal(selectBranchLocation)">Change Branch</button></span>
                                                     </div>
                                                     <div class="phone-number d-flex align-items-center gap-2">
                                                         <i class="bi bi-telephone-fill tikme-text-theme"></i>
@@ -44,3 +44,22 @@
         </div>
     </div>
 </section>
+
+
+<!-- Start Select Branch Location -->
+<ng-template #selectBranchLocation let-modal>
+    <div class="modal-header tikme-bg-theme py-2">
+        <h5 class="modal-title tikme-text-white mx-auto">Select Near by Location</h5>
+        <button type="button" class="btn btn-link text-white p-0 shadow-none" (click)="modal.dismiss('Cross click')">
+            <i class="bi bi-x-circle-fill fs-4"></i>
+        </button>
+    </div>
+    <div class="modal-body px-4 overflow-y-auto" [style.maxHeight.px]="320">
+        <div class="vstack gap-2">
+            <div class="d-grid" *ngFor="let list of [1,2,3,4,5,6,7,8,9,10]">
+                <button class="btn tikme-btn-theme-lightgray-hover text-start" (click)="modal.dismiss('locationSelected')">location-{{list}}</button>
+            </div>
+        </div>
+    </div>
+</ng-template>
+<!-- End Select Branch Location-->

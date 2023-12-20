@@ -176,6 +176,18 @@ p {
             background: var(--tikme-theme);
             border-color: var(--tikme-theme);
         }
+
+        &-hover {
+            color: var(--tikme-dark);
+            background: var(--tikme-lightgray);
+            border-color: var(--tikme-lightgray);
+
+            &:is(&:hover, &.active, &:active) {
+                color: var(--tikme-theme);
+                background: var(--tikme-white);
+                border-color: var(--tikme-lightgray);
+            }
+        }
     }
 
     &-success {
@@ -246,6 +258,18 @@ p {
     }
 }
 
+.bg-blur-4 {
+    backdrop-filter: blur(4px);
+}
+
+.tikme-backdrop.tikme-backdrop-bg {
+    background: hsla(0, 0%, 0%, 0.65) !important;
+
+    &.show {
+        opacity: 1;
+    }
+}
+
 .tikme-modal {
     .modal-content {
         border-radius: 1rem;
@@ -257,6 +281,7 @@ p {
             border-radius: 0.5rem;
 
             .nav-pills .nav-item .nav-link {
+                padding: 0.65rem 1rem;
                 color: var(--tikme-dark);
                 background-color: var(--tikme-white);
                 transition: 0.2 ease-in-out;
@@ -267,5 +292,30 @@ p {
                 }
             }
         }
+    }
+}
+
+
+.tikme-tooltip {
+    .tooltip-inner {
+        background-color: var(--tikme-lightgray);
+        color: var(--tikme-black);
+        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    &.bs-tooltip-end .tooltip-arrow::before {
+        border-right-color: var(--tikme-lightgray);
+    }
+
+    &.bs-tooltip-start .tooltip-arrow::before {
+        border-left-color: var(--tikme-lightgray);
+    }
+
+    &.bs-tooltip-top .tooltip-arrow::before {
+        border-top-color: var(--tikme-lightgray);
+    }
+
+    &.bs-tooltip-bottom .tooltip-arrow::before {
+        border-bottom-color: var(--tikme-lightgray);
     }
 }

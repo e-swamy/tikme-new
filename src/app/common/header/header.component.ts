@@ -39,7 +39,7 @@ export class HeaderComponent {
   openLoginForm(content: any) {
     this.offcanvasService.open(content, {
       position: 'end',
-      panelClass: 'tikme-offcanvas rounded-start rounded-start-4 border-0'
+      panelClass: 'tikme-offcanvas rounded-start rounded-start-4 border-0', backdropClass:'bg-blur-4 tikme-backdrop tikme-backdrop-bg'
     });
   }
 }
